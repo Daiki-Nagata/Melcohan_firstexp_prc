@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    練習ラウンド
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        10の予算を売上が最大化するように投資してください。
+    </p>
+    
+    <p>
+        広告宣伝費に<strong>いくら</strong>投資しますか？（0～10）
+    </p>   
+    {% formfield player.prc_adv %}
+
+    <p>
+        品質改善費に<strong>いくら</strong>投資しますか？（0～10）
+    </p> 
+    {% formfield player.prc_quality %}
+
+    {% next_button %}
+
+{% endblock %}

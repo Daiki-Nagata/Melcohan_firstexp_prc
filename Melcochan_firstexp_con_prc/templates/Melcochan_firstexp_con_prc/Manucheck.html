@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    理解度テスト
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        インストラクションの内容について質問します。
+    </p>
+    
+    <p>
+        あなたのタスクは何ですか？
+    </p>   
+    {% formfield player.check_1 %}
+
+    <p>
+        この回答では、左から3つ目のボックスを選択してください。
+    </p> 
+    {% formfield player.check_2 %}
+
+    {% next_button %}
+
+{% endblock %}
